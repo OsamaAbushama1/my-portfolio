@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     title: "AI & Data Analysis | Osama Abushama",
     description:
       "Explore my AI and Data Analysis projects including interactive Power BI and Excel dashboards designed to track key performance indicators.",
-    url: "https://osama-abushama.vercel.app/ai-data",
+    url: "https://osamaabushama.tech/ai-data",
     siteName: "Osama Abushama",
     images: ["/banner.png"],
     type: "website",

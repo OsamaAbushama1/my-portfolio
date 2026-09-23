@@ -117,7 +117,7 @@ export const metadata: Metadata = {
     title: "Web Development | Osama Abushama",
     description:
       "Explore my Web Development projects including high-performance React and Next.js applications, clinic websites, portfolios, and more.",
-    url: "https://osama-abushama.vercel.app/web-dev",
+    url: "https://osamaabushama.tech/web-dev",
     siteName: "Osama Abushama",
     images: ["/banner.png"],
     type: "website",

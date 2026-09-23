@@ -91,7 +91,7 @@ export async function generateMetadata({
     openGraph: {
       title: `${project.title} | Osama Abushama`,
       description: project.description,
-      url: `https://osama-abushama.vercel.app/ai-data/${id}`,
+      url: `https://osamaabushama.tech/ai-data/${id}`,
       siteName: "Osama Abushama",
       images: [
         {
@@ -140,7 +140,7 @@ export default async function AiDataCaseStudy({
         }}
         aria-hidden="true"
       />
-      
+
       <div className="relative z-10 mx-auto grid max-w-[110rem] gap-10 lg:grid-cols-[18rem_minmax(0,1fr)] xl:grid-cols-[20rem_minmax(0,1fr)]">
         <Link
           href="/"
@@ -173,9 +173,8 @@ export default async function AiDataCaseStudy({
                     <li key={p.id}>
                       <Link
                         href={`/ai-data/${p.id}`}
-                        className={`transition hover:text-[#ff4d00] ${
-                          p.id === id ? "text-[#ff4d00]" : ""
-                        }`}
+                        className={`transition hover:text-[#ff4d00] ${p.id === id ? "text-[#ff4d00]" : ""
+                          }`}
                       >
                         {p.title}
                       </Link>

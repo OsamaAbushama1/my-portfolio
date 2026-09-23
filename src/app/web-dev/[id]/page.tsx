@@ -251,7 +251,7 @@ export async function generateMetadata({
     openGraph: {
       title: `${project.title} | Osama Abushama`,
       description: project.description,
-      url: `https://osama-abushama.vercel.app/web-dev/${id}`,
+      url: `https://osamaabushama.tech/web-dev/${id}`,
       siteName: "Osama Abushama",
       images: [
         {

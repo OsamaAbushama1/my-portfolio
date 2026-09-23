@@ -3,4 +3,4 @@ User-agent: *
 Disallow:
 
 # Sitemap location
-Sitemap: https://osama-abushama.vercel.app/sitemap.xml
+Sitemap: https://osamaabushama.tech/sitemap.xml
