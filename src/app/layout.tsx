@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   title: "Osama Abushama | Frontend Developer",
 
   description:
-    "Osama Abushama — Frontend Developer creating modern, responsive, and high-performance web experiences.",
+    "Frontend Developer specializing in React and Next.js, building modern, responsive, and high-performance websites. Explore my real-world projects, experience, certifications, and web development services.",
 
   keywords: [
     "Osama Abushama",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Osama Abushama | Frontend Developer",
     description:
-      "Explore my frontend development projects, experience, certifications, and services.",
+      "Frontend Developer specializing in React and Next.js, building modern, responsive, and high-performance websites. Explore my real-world projects, experience, certifications, and web development services.",
     url: "https://osamaabushama.tech",
     siteName: "Osama Abushama",
     type: "website",
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Osama Abushama | Frontend Developer",
     description:
-      "Explore my frontend development projects, experience, certifications, and services.",
+      "Frontend Developer specializing in React and Next.js, building modern, responsive, and high-performance websites. Explore my real-world projects, experience, certifications, and web development services.",
     images: ["/banner.png"],
   },
 
