@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Gabriela, DotGothic16, Inter } from "next/font/google";
+import {
+  Geist,
+  Geist_Mono,
+  Gabriela,
+  DotGothic16,
+  Inter,
+} from "next/font/google";
 import "./globals.css";
 
 import FloatingChatWidget from "./components/FloatingChatWidget";
@@ -94,20 +100,61 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://osamaabushama.tech/#person",
+
+    name: "Osama Abushama",
+
+    url: "https://osamaabushama.tech",
+
+    jobTitle: "Frontend Developer",
+
+    description:
+      "Frontend Developer specializing in React and Next.js, building modern, responsive, and high-performance web applications.",
+
+    sameAs: [
+      "https://github.com/OsamaAbushama1",
+      "https://www.linkedin.com/in/osama-abushama-59021921a/",
+    ],
+
+    knowsAbout: [
+      "Frontend Development",
+      "React",
+      "Next.js",
+      "TypeScript",
+      "JavaScript",
+      "Tailwind CSS",
+      "Responsive Web Design",
+    ],
+  };
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" />
+
         <meta
           name="google-site-verification"
           content="GjOBTLtHaHycblcBrWSNMNEtISZcRlGPOMOLRlyGT7I"
         />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(personSchema),
+          }}
+        />
+
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${gabriela.variable} ${dotGothic.variable} ${inter.variable} font-inter antialiased`}
       >
         {children}
+
         <FloatingChatWidget />
       </body>
     </html>
