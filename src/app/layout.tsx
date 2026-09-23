@@ -54,9 +54,9 @@ export const metadata: Metadata = {
   creator: "Osama Abushama",
 
   openGraph: {
-    title: "Osama Abushama | Web Designer & Frontend Developer",
+    title: "Osama Abushama | Frontend Developer",
     description:
-      "Explore my portfolio, web development projects, experience, certifications, and services.",
+      "Explore my frontend development projects, experience, certifications, and services.",
     url: "https://osamaabushama.tech",
     siteName: "Osama Abushama",
     type: "website",
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Osama Abushama | Frontend Developer",
     description:
-      "Explore my portfolio, web development projects, experience, certifications, and services.",
+      "Explore my frontend development projects, experience, certifications, and services.",
     images: ["/banner.png"],
   },
 
