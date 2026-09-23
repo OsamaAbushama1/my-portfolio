@@ -41,25 +41,35 @@ const contactLinks = [
 ];
 
 export const metadata: Metadata = {
-  title: "AI & Data Analysis | Osama Abushama",
+  title: "AI & Data Analysis Projects | Osama Abushama",
   description:
-    "Explore my AI and Data Analysis projects including interactive Power BI and Excel dashboards designed to track key performance indicators.",
+    "Explore data analysis and visualization projects by Osama Abushama, including interactive Power BI and Excel dashboards for KPI tracking, business insights, and data-driven decision making.",
+  alternates: {
+    canonical: "/ai-data",
+  },
   openGraph: {
-    title: "AI & Data Analysis | Osama Abushama",
+    title: "AI & Data Analysis Projects | Osama Abushama",
     description:
-      "Explore my AI and Data Analysis projects including interactive Power BI and Excel dashboards designed to track key performance indicators.",
-    url: "https://osamaabushama.tech/ai-data",
+      "Explore data analysis and visualization projects by Osama Abushama, including Power BI and Excel dashboards for KPI tracking and business insights.",
+    url: "/ai-data",
     siteName: "Osama Abushama",
-    images: ["/banner.png"],
     type: "website",
+    images: [
+      {
+        url: "/ai-data-banner.png",
+        width: 1200,
+        height: 630,
+        alt: "AI and Data Analysis Projects by Osama Abushama",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI & Data Analysis | Osama Abushama",
+    title: "AI & Data Analysis Projects | Osama Abushama",
     description:
-      "Explore my AI and Data Analysis projects including interactive dashboards.",
+      "Explore Power BI and Excel data analysis projects by Osama Abushama.",
     creator: "@OsamaAbushama",
-    images: ["/banner.png"],
+    images: ["/ai-data-banner.png"],
   },
 };
 
@@ -149,6 +159,9 @@ export default function AiDataPage() {
         </aside>
 
         <section className="grid gap-3 md:grid-cols-2 lg:pt-6" aria-label="AI & Data Analysis projects">
+          <h1 id="ai-data-projects" className="sr-only">
+            AI and Data Analysis Projects by Osama Abushama
+          </h1>
           {projects.map((project, index) => (
             <Link
               key={project.id}

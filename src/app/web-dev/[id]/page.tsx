@@ -112,7 +112,7 @@ const projects = [
       "/projects-images/mandialwafa/mandialwafa5.png",
       "/projects-images/mandialwafa/mandialwafa6.png",
     ],
-    liveLink: "#",
+    liveLink: "https://mandialwafa.com/",
     description:
       "I have developed Mandi Alwafa as a traditional Saudi restaurant platform with a strong focus on clean interface structure, responsive layouts, smooth user interactions, and production-ready frontend implementation. The project combines Next.js, TypeScript, Tailwind, and multilingual support (RTL/LTR) to deliver a fast, polished dual-language experience that presents the brand's authentic flavor clearly and helps users explore the menu with confidence.",
     tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "RTL/LTR"],
@@ -242,31 +242,44 @@ export async function generateMetadata({
   if (!project) {
     return {
       title: "Project Not Found | Osama Abushama",
+      robots: {
+        index: false,
+        follow: false,
+      },
     };
   }
 
+  const projectUrl = `https://osamaabushama.tech/web-dev/${project.id}`;
+  const projectTitle = `${project.title} | Frontend Project | Osama Abushama`;
+
   return {
-    title: `${project.title} | Osama Abushama`,
+    title: projectTitle,
     description: project.description,
+
+    alternates: {
+      canonical: projectUrl,
+    },
+
     openGraph: {
-      title: `${project.title} | Osama Abushama`,
+      title: projectTitle,
       description: project.description,
-      url: `https://osamaabushama.tech/web-dev/${id}`,
+      url: projectUrl,
       siteName: "Osama Abushama",
+      type: "website",
+      locale: "en_US",
       images: [
         {
           url: project.image,
           width: project.width,
           height: project.height,
-          alt: project.title,
+          alt: `${project.title} frontend development project by Osama Abushama`,
         },
       ],
-      locale: "en_US",
-      type: "website",
     },
+
     twitter: {
       card: "summary_large_image",
-      title: `${project.title} | Osama Abushama`,
+      title: projectTitle,
       description: project.description,
       creator: "@OsamaAbushama",
       images: [project.image],

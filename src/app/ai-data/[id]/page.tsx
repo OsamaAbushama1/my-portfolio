@@ -61,10 +61,26 @@ const projects = [
 ];
 
 const contactLinks = [
-  { label: "X", href: "https://x.com/OsamaAbushama", Icon: FaXTwitter },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/osama-abushama-59021921a/", Icon: FaLinkedinIn },
-  { label: "GitHub", href: "https://github.com/OsamaAbushama1", Icon: FaGithub },
-  { label: "WhatsApp", href: "https://wa.me/201021730424", Icon: FaWhatsapp },
+  {
+    label: "X",
+    href: "https://x.com/OsamaAbushama",
+    Icon: FaXTwitter
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/osama-abushama-59021921a/",
+    Icon: FaLinkedinIn
+  },
+  {
+    label: "GitHub",
+    href: "https://github.com/OsamaAbushama1",
+    Icon: FaGithub
+  },
+  {
+    label: "WhatsApp",
+    href: "https://wa.me/201021730424",
+    Icon: FaWhatsapp
+  },
 ];
 
 export function generateStaticParams() {
@@ -82,31 +98,46 @@ export async function generateMetadata({
   if (!project) {
     return {
       title: "Project Not Found | Osama Abushama",
+      robots: {
+        index: false,
+        follow: false,
+      },
     };
   }
+  const projectUrl = `https://osamaabushama.tech/ai-data/${project.id}`;
+  const projectTitle =
+    project.id === "1"
+      ? "Power BI Dashboard | Data Analysis Project | Osama Abushama"
+      : "Excel Dashboard | Data Analysis Project | Osama Abushama";
+
 
   return {
-    title: `${project.title} | Osama Abushama`,
+    title: projectTitle,
     description: project.description,
+
+    alternates: {
+      canonical: projectUrl,
+    },
+
     openGraph: {
-      title: `${project.title} | Osama Abushama`,
+      title: projectTitle,
       description: project.description,
-      url: `https://osamaabushama.tech/ai-data/${id}`,
+      url: projectUrl,
       siteName: "Osama Abushama",
+      locale: "en_US",
+      type: "website",
       images: [
         {
           url: project.image,
           width: project.width,
           height: project.height,
-          alt: project.title,
+          alt: `${project.title} data analysis project by Osama Abushama`,
         },
       ],
-      locale: "en_US",
-      type: "website",
     },
     twitter: {
       card: "summary_large_image",
-      title: `${project.title} | Osama Abushama`,
+      title: projectTitle,
       description: project.description,
       creator: "@OsamaAbushama",
       images: [project.image],

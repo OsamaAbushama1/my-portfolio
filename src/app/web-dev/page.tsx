@@ -110,25 +110,35 @@ const contactLinks = [
 ];
 
 export const metadata: Metadata = {
-  title: "Web Development | Osama Abushama",
+  title: "Frontend Development Projects | Osama Abushama",
   description:
-    "Explore my Web Development projects including high-performance React and Next.js applications, clinic websites, portfolios, and more.",
+    "Explore frontend development projects by Osama Abushama, built with React, Next.js, TypeScript, Tailwind CSS, responsive design, animations, and modern web technologies.",
+  alternates: {
+    canonical: "/web-dev",
+  },
   openGraph: {
-    title: "Web Development | Osama Abushama",
+    title: "Frontend Development Projects | Osama Abushama",
     description:
-      "Explore my Web Development projects including high-performance React and Next.js applications, clinic websites, portfolios, and more.",
-    url: "https://osamaabushama.tech/web-dev",
+      "Explore frontend projects by Osama Abushama, including modern websites and web applications built with React, Next.js, TypeScript, and Tailwind CSS.",
+    url: "/web-dev",
     siteName: "Osama Abushama",
-    images: ["/banner.png"],
     type: "website",
+    images: [
+      {
+        url: "/web-dev-banner.png",
+        width: 1200,
+        height: 630,
+        alt: "Frontend Development Projects by Osama Abushama",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Web Development | Osama Abushama",
+    title: "Frontend Development Projects | Osama Abushama",
     description:
-      "Explore my Web Development projects including high-performance React and Next.js applications.",
+      "Explore frontend projects by Osama Abushama built with React, Next.js, TypeScript, Tailwind CSS, and modern web technologies.",
     creator: "@OsamaAbushama",
-    images: ["/banner.png"],
+    images: ["/web-dev-banner.png"],
   },
 };
 
@@ -214,7 +224,10 @@ export default function WebDevWorksPage() {
           </div>
         </aside>
 
-        <section className="grid gap-3 md:grid-cols-2 lg:pt-6" aria-label="All web development works">
+        <section className="grid gap-3 md:grid-cols-2 lg:pt-6" aria-label="web-development-projects">
+          <h1 id="web-development-projects" className="sr-only">
+            Frontend Development Projects by Osama Abushama
+          </h1>
           {projects.map((project, index) => (
             <Link
               key={project.id}
