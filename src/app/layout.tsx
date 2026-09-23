@@ -34,8 +34,59 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Osama Abushama",
-  description: "Osama Abushama | Frontend Developer",
+  metadataBase: new URL("https://osamaabushama.tech"),
+
+  title: "Osama Abushama | Frontend Developer",
+
+  description:
+    "Osama Abushama — Frontend Developer creating modern, responsive, and high-performance web experiences.",
+
+  keywords: [
+    "Osama Abushama",
+    "Frontend Developer",
+    "React Developer",
+    "Next.js Developer",
+    "Web Developer",
+    "Portfolio",
+  ],
+
+  authors: [{ name: "Osama Abushama" }],
+  creator: "Osama Abushama",
+
+  openGraph: {
+    title: "Osama Abushama | Web Designer & Frontend Developer",
+    description:
+      "Explore my portfolio, web development projects, experience, certifications, and services.",
+    url: "https://osamaabushama.tech",
+    siteName: "Osama Abushama",
+    type: "website",
+    locale: "en_US",
+    images: [
+      {
+        url: "/banner.png",
+        width: 1200,
+        height: 630,
+        alt: "Osama Abushama - Frontend Developer",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Osama Abushama | Frontend Developer",
+    description:
+      "Explore my portfolio, web development projects, experience, certifications, and services.",
+    images: ["/banner.png"],
+  },
+
+  alternates: {
+    canonical: "https://osamaabushama.tech",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
